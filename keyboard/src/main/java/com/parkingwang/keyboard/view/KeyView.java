@@ -8,11 +8,12 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.parkingwang.keyboard.engine.KeyEntry;
 import com.parkingwang.keyboard.engine.KeyType;

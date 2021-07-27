@@ -6,10 +6,11 @@ package com.parkingwang.keyboard.view;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
 import com.parkingwang.keyboard.engine.KeyEntry;
 import com.parkingwang.keyboard.engine.KeyType;

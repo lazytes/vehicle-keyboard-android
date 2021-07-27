@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorInt;
 import android.view.Window;
+
+import androidx.annotation.ColorInt;
 
 import com.parkingwang.keyboard.engine.KeyboardEngine;
 import com.parkingwang.keyboard.view.InputView;

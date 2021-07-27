@@ -3,12 +3,11 @@ subprojects {
     buildscript {
         repositories {
             google()
-            jcenter()
             mavenCentral()
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:3.2.1'
-            classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+            classpath 'com.android.tools.build:gradle:4.2.2'
+            classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
             classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
             classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.4"
             classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
@@ -18,15 +17,14 @@ subprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
 
 ext {
     minSdkVersion = 13
-    compileSdkVersion = 26
-    buildToolsVersion = '26.0.2'
-    sourceCompatibility = JavaVersion.VERSION_1_7
+    compileSdkVersion = 30
+    buildToolsVersion = '30.0.3'
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 task clean(type: Delete) {

@@ -2,13 +2,14 @@ package com.parkingwang.keyboard;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
 import android.widget.FrameLayout;
+
+import androidx.annotation.NonNull;
 
 import com.parkingwang.keyboard.view.KeyboardView;
 import com.parkingwang.vehiclekeyboard.R;
