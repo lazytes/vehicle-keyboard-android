@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.jfrog.artifactory'
 
 group = GROUP
 
@@ -11,7 +9,7 @@ logger.info("VehicleKeyboardAndroid using version=$project.version")
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion '28.0.3'
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -69,43 +67,6 @@ install {
                 name 'XiaoQiang Li'
             }
         }
-    }
-}
-
-artifactory {
-    contextUrl = 'https://oss.jfrog.org'
-
-    publish {
-        repository {
-            repoKey = 'oss-snapshot-local'
-
-            if (project.hasProperty('bintrayUser')) {
-                username = project.property('bintrayUser')
-                password = project.property('bintrayKey')
-            }
-        }
-
-        defaults {
-            publishConfigs('archives')
-        }
-    }
-}
-
-// Configure gradle-bintray-plugin (for publishing releases)
-bintray {
-    configurations = ['archives']
-
-    publish = true
-
-    pkg {
-        repo = 'maven'
-        name = 'VehicleKeyboardAndroid'
-        userOrg = 'parkingwang'
-        licenses = ['Apache-2.0']
-        labels = ['VehicleNumber', 'keyboard', 'android']
-        websiteUrl = 'https://github.com/parkingwang/vehicle-keyboard-android'
-        issueTrackerUrl = 'https://github.com/parkingwang/vehicle-keyboard-android/issues'
-        vcsUrl = 'https://github.com/parkingwang/vehicle-keyboard-android.git'
     }
 }
 
